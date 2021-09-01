@@ -38,7 +38,7 @@ const hmrcCheck = async (vatNumber) => {
   }
 };
 
-export default async (countryCode, vatNumber) =>
+module.exports = async (countryCode, vatNumber) =>
   countryCode === "GB"
     ? hmrcCheck(vatNumber)
     : viesCheck(countryCode, vatNumber);
